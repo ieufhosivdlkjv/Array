@@ -1299,6 +1299,8 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 			local KeyMain = KeyUI.Main
 			KeyMain.Title.Text = Settings.KeySettings.Title or Settings.Name
 			KeyMain.Subtitle.Text = Settings.KeySettings.Subtitle or "Key System"
+			KeyMain.NoteMessage.Text = Settings.KeySettings.Note or ""
+
 
 			KeyMain.Size = UDim2.new(0, 467, 0, 175)
 			KeyMain.BackgroundTransparency = 1
