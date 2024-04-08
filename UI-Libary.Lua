@@ -1179,9 +1179,9 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
-	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
+	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Dinero2483"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
-		LoadingFrame.Version.Text = "Arrayfield UI"
+		LoadingFrame.Version.Text = "OhioXGUI"
 	end
 	Topbar.Visible = false
 	Elements.Visible = false
@@ -3325,7 +3325,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 				end)
 				Button.Name = name
 				Button.Parent = PromptUI.Buttons -- saving memory
-				Button.Size = UDim2.fromOffset(Button.TextLabel.TextBounds.X + 15, 30)
+				Button.Size = UDim2.fromOffset(Button.TextLabel.TextBounds.X + 25, 30)
 			end
 		end
 
@@ -3333,7 +3333,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 		wait(.2)
 		TweenService:Create(PromptUI, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {BackgroundTransparency = 0,Size = UDim2.new(0,350,0,150)}):Play()
 		wait(0.2)
-		TweenService:Create(PromptUI.UIStroke, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
+		TweenService:Create(PromptUI.UIStroke, TweenInfo.new(0.44, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
 		TweenService:Create(PromptUI.Title, TweenInfo.new(0.45, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 		TweenService:Create(PromptUI.Content, TweenInfo.new(0.45, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 		TweenService:Create(PromptUI.Sub, TweenInfo.new(0.45, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
