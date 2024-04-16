@@ -14,8 +14,8 @@ local ArrayFieldLibrary = {
 			TextFont = "Default", -- Default will use the various font faces used across ArrayField
 			TextColor = Color3.fromRGB(240, 240, 240),
 
-			Background = Color3.fromRGB(25, 25, 25),
-			Topbar = Color3.fromRGB(34, 34, 34),
+			Background = Color3.fromRGB(11, 19, 48),
+			Topbar = Color3.fromRGB(12, 19, 59),
 			Shadow = Color3.fromRGB(20, 20, 20),
 
 			NotificationBackground = Color3.fromRGB(20, 20, 20),
@@ -1181,7 +1181,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Dinero2483"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
-		LoadingFrame.Version.Text = "OhioXGUI"
+		LoadingFrame.Version.Text = "TeTraX Official"
 	end
 	Topbar.Visible = false
 	Elements.Visible = false
