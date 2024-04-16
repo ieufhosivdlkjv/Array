@@ -18,7 +18,7 @@ local ArrayFieldLibrary = {
 			Topbar = Color3.fromRGB(12, 19, 59),
 			Shadow = Color3.fromRGB(20, 20, 20),
 
-			NotificationBackground = Color3.fromRGB(20, 20, 20),
+			NotificationBackground = Color3.fromRGB(11, 19, 48),
 			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
 
 			TabBackground = Color3.fromRGB(80, 80, 80),
