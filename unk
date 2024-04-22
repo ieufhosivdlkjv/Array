@@ -40,7 +40,7 @@ end
 local Dropdown = Tab:CreateDropdown({
     Name = "Dropdown Example",
     Options = plr ,
-    CurrentOption = "Option 1" or {"Option 1","Option 3"},
+    CurrentOption = plr , {"Option 1","Option 3"},
     MultiSelection = false, -- If MultiSelections is allowed
     Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(t)
