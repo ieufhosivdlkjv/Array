@@ -39,8 +39,8 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 local Dropdown = Tab:CreateDropdown({
     Name = "Dropdown Example",
-    Options = plr ,
-    CurrentOption = plr , {"Option 1","Option 3"},
+    Options = plr,
+    CurrentOption = "Option 1" or {"Option 1","Option 3"},
     MultiSelection = false, -- If MultiSelections is allowed
     Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(t)
@@ -51,12 +51,19 @@ local Dropdown = Tab:CreateDropdown({
  })
 
 
+
  local Button = Tab:CreateButton({
     Name = "Button Example",
     Info = "Button info/Description.", -- Speaks for itself, Remove if none.
     Interact = 'Changable',
     Callback = function()
-        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[PlayerTP].Character.HumanoidRootPart.CFrame
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[PlayerTP].Character.HumanoidRootPart.CFrame
     -- The function that takes place when the button is pressed
     end,
  })
+
+
+
+
+
+
