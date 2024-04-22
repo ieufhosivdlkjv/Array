@@ -37,8 +37,9 @@ plr = {}
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(plr,v.Name)
 end
+
 local Dropdown = Tab:CreateDropdown({
-    Name = "Dropdown Example",
+    Name = "Dr",
     Options = plr,
     CurrentOption = "Option 1" or {"Option 1","Option 3"},
     MultiSelection = false, -- If MultiSelections is allowed
