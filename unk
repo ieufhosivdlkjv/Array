@@ -1,70 +1,72 @@
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+local NotificationLibrary = {}
 
-local Window = Rayfield:CreateWindow({
-   Name = "Rayfield Example Window",
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Sirius Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/sirius)",
-      FileName = "SiriusKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "Hello"
-   }
-})
+local AbyssGUI = Instance.new("ScreenGui"); AbyssGUI.Name = "Abyss"; AbyssGUI.Parent = game.CoreGui; AbyssGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+function NotificationLibrary:Notify(TitleText, Desc, Delay)
+    local Notification = Instance.new("Frame")
+	local Line = Instance.new("Frame")
+	local Warning = Instance.new("ImageLabel")
+	local UICorner = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local Description = Instance.new("TextLabel")
 
+	Notification.Name = "Notification"
+	Notification.Parent = AbyssGUI
+	Notification.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	Notification.BackgroundTransparency = 0.400
+	Notification.BorderSizePixel = 0
+	Notification.Position = UDim2.new(1, 5, 0, 75)
+	Notification.Size = UDim2.new(0, 450, 0, 60)
 
-local Section = Tab:CreateSection("Section Example",true) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+	Line.Name = "Line"
+	Line.Parent = Notification
+	Line.BackgroundColor3 = Color3.fromRGB(9, 245, 5)
+	Line.BorderSizePixel = 0
+	Line.Position = UDim2.new(0, 0, 0.938461304, 0)
+	Line.Size = UDim2.new(0, 0, 0, 4)
 
+	Warning.Name = "Warning"
+	Warning.Parent = Notification
+	Warning.BackgroundTransparency = 1.000
+	Warning.Position = UDim2.new(0.0258302614, 0, 0.0897435844, 0)
+	Warning.Size = UDim2.new(0, 44, 0, 49)
+	Warning.Image = "rbxassetid://3944668821"
+	Warning.ImageColor3 = Color3.fromRGB(9, 245, 5)
+	Warning.ScaleType = Enum.ScaleType.Fit
 
+	UICorner.CornerRadius = UDim.new(0, 20)
+	UICorner.Parent = Warning
 
-plr = {}
-for i,v in pairs(game:GetService("Players"):GetChildren()) do
-    table.insert(plr,v.Name)
+	Title.Name = "Title"
+	Title.Parent = Notification
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.161, 0, 0.155, 0)
+	Title.Size = UDim2.new(0, 205, 0, 15)
+	Title.Text = TitleText
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 12.000
+	Title.TextStrokeTransparency = 0.500
+	Title.TextXAlignment = Enum.TextXAlignment.Left
+
+	Description.Name = "Description"
+	Description.Parent = Notification
+	Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Description.BackgroundTransparency = 1.000
+	Description.Position = UDim2.new(0.161, 0, 0.483, 0)
+	Description.Size = UDim2.new(0, 205, 0, 18)
+	Description.Text = Desc
+	Description.TextColor3 = Color3.fromRGB(199, 199, 199)
+	Description.TextSize = 12.000
+	Description.TextStrokeTransparency = 0.500
+	Description.TextXAlignment = Enum.TextXAlignment.Left
+	    Notification:TweenPosition(UDim2.new(1, -400, 0, 75), "Out", "Sine", 0.35)
+	    wait(0.35)
+	    Line:TweenSize(UDim2.new(0, 450, 0, 4), "Out", "Linear", Delay)
+	    wait(Delay)
+	    Notification:TweenPosition(UDim2.new(1, 5, 0, 75), "Out", "Sine", 0.35)
+	    wait(0.35)
+	    Notification:Destroy()
 end
 
-local Dropdown = Tab:CreateDropdown({
-    Name = "Dr",
-    Options = plr ,
-    CurrentOption = "" or {"Option 1","Option 3"},
-    MultiSelection = false, -- If MultiSelections is allowed
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(t)
-        PlayerTP = t
-    -- The function that takes place when the selected option is changed
-    -- The variable (Option) is a string for the value that the dropdown was changed to
-    end,
- })
-
-
-
- local Button = Tab:CreateButton({
-    Name = "Button Example",
-    Info = "Button info/Description.", -- Speaks for itself, Remove if none.
-    Interact = 'Changable',
-    Callback = function()
-    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[PlayerTP].Character.HumanoidRootPart.CFrame
-    -- The function that takes place when the button is pressed
-    end,
- })
-
-
-
-
-
-
+return NotificationLibrary
