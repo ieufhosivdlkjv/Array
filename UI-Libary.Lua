@@ -1110,17 +1110,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 	LoadingFrame.Subtitle.TextTransparency = 1
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
-<<<<<<< HEAD
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
 	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
 		LoadingFrame.Version.Text = "Arrayfield UI"
-=======
-	LoadingFrame.Title.Text = Settings.LoadingTitle or ""
-	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius | Meta"
-	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
-		LoadingFrame.Version.Text = "TeTraX UI"
->>>>>>> 1fc5f9c7106c09aae39ffe417006053a8ae74cb2
 	end
 	Topbar.Visible = false
 	Elements.Visible = false
@@ -3677,8 +3670,4 @@ function RayfieldLibrary:LoadConfiguration()
 end
 task.delay(9, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
 
-<<<<<<< HEAD
 return RayfieldLibrary
-=======
-return RayfieldLibrary
->>>>>>> 1fc5f9c7106c09aae39ffe417006053a8ae74cb2
