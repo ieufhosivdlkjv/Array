@@ -190,7 +190,7 @@ function ChangeTheme(ThemeName)
 	SelectedTheme = ArrayField.Theme[ThemeName]
 	for _, obj in ipairs(ArrayField:GetDescendants()) do
 		if obj.ClassName == "TextLabel" or obj.ClassName == "TextBox" or obj.ClassName == "TextButton" then
-			if SelectedTheme.TextFont ~= "Default" then 
+			if SelectedTheme.TextFont ~= "LuckiestGuy" then 
 				obj.TextColor3 = SelectedTheme.TextColor
 				obj.Font = SelectedTheme.TextFont
 			end
