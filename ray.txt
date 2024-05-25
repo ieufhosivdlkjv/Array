@@ -458,8 +458,8 @@ windowName.Parent = topbar
 
 local PlayerImage = Instance.new("ImageLabel")
 PlayerImage.Name = "PlayerImage"
-PlayerImage = game:GetService("Players"):GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
-
+PlayerImage.Image = game:GetService("Players"):GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+PlayerImage.Parent = topbar
 
 
 
