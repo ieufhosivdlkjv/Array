@@ -444,17 +444,25 @@ topbarLine.Parent = topbar
 
 local windowName = Instance.new("TextLabel")
 windowName.Name = "WindowName"
-windowName.Font = Enum.Font.GothamBold
+windowName.Font = Enum.Font.LuckiestGuy
 windowName.Text = Info.Text
 windowName.TextColor3 = Color3.fromRGB(255, 255, 255)
 windowName.TextSize = 13
 windowName.TextTransparency = 0.1
-windowName.TextXAlignment = Enum.TextXAlignment.Left
+windowName.TextXAlignment = Enum.TextXAlignment.Middle
 windowName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 windowName.BackgroundTransparency = 1
 windowName.Position = UDim2.new(0, 6, 0, 0)
 windowName.Size = UDim2.new(0, 418, 0, 34)
 windowName.Parent = topbar
+
+local PlayerImage = Instance.new("ImageLabel")
+PlayerImage.Name = "PlayerImage"
+PlayerImage = game:GetService("Players"):GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+PlayerImage.Position = UDim2.new(0, 6, 0, 0)
+
+
+
 
 local closeButton = Instance.new("ImageButton")
 closeButton.Name = "CloseButton"
