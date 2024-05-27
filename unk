@@ -13,6 +13,7 @@ local G2L = {};
 -- StarterGui.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+game:GetService("StarterGui").ResetPlayerGuiOnSpawn = false
 
 -- StarterGui.ScreenGui.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
