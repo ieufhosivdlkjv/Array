@@ -452,7 +452,7 @@ windowName.TextTransparency = 0.1
 windowName.TextXAlignment = Enum.TextXAlignment.Center
 windowName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 windowName.BackgroundTransparency = 1
-windowName.Position = UDim2.new(23, 83, 23, 23)
+windowName.Position = UDim2.new(0, 10,0 ,0)
 windowName.Size = UDim2.new(0, 418, 0, 34)
 windowName.Parent = topbar
 
