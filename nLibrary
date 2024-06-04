@@ -133,7 +133,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Uncheck.Image = "http://www.roblox.com/asset/?id=6031094678"
         Uncheck.ImageColor3 = Color3.fromRGB(255, 84, 84)
         Uncheck.MouseButton1Down:Connect(function()
-        print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         end)
         
         Check.Name = "Check"
@@ -148,7 +148,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Check.Image = "http://www.roblox.com/asset/?id=6031094667"
         Check.ImageColor3 = Color3.fromRGB(83, 230, 50)
         Check.MouseButton1Down:Connect(function()
-        print("Checkssssssssss")
+        
         end)
 
         local function ORBHB_fake_script()
