@@ -126,8 +126,8 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Uncheck.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Uncheck.BackgroundTransparency = 1.000
         Uncheck.BorderSizePixel = 0
-        Uncheck.Position = UDim2.new(0, 28, 0, 76)
-        Uncheck.Size = UDim2.new(0, 25, 0, 25)
+        Uncheck.Position = UDim2.new(0, 34, 0, 76)
+        Uncheck.Size = UDim2.new(0, 28, 0, 28)
         Uncheck.ZIndex = 5
         Uncheck.AutoButtonColor = false
         Uncheck.Image = "http://www.roblox.com/asset/?id=6031094678"
@@ -139,7 +139,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Check.BackgroundTransparency = 1.000
         Check.BorderSizePixel = 0
         Check.Position = UDim2.new(0, 7, 0, 76)
-        Check.Size = UDim2.new(0, 25, 0, 25)
+        Check.Size = UDim2.new(0, 28, 0, 28)
         Check.ZIndex = 5
         Check.AutoButtonColor = false
         Check.Image = "http://www.roblox.com/asset/?id=6031094667"
