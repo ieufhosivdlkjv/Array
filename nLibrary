@@ -126,7 +126,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Uncheck.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Uncheck.BackgroundTransparency = 1.000
         Uncheck.BorderSizePixel = 0
-        Uncheck.Position = UDim2.new(0, 42, 0, 76)
+        Uncheck.Position = UDim2.new(0, 42, 0, 70)
         Uncheck.Size = UDim2.new(0, 28, 0, 28)
         Uncheck.ZIndex = 5
         Uncheck.AutoButtonColor = false
@@ -141,7 +141,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Check.BackgroundTransparency = 1.000
         Check.BorderSizePixel = 0
-        Check.Position = UDim2.new(0, 7, 0, 76)
+        Check.Position = UDim2.new(0, 7, 0, 70)
         Check.Size = UDim2.new(0, 28, 0, 28)
         Check.ZIndex = 5
         Check.AutoButtonColor = false
