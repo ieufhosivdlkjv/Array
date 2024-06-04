@@ -134,9 +134,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Check.AutoButtonColor = false
         Check.Image = "http://www.roblox.com/asset/?id=6031094667"
         Check.ImageColor3 = Color3.fromRGB(83, 230, 50)
-        Check.MouseButton1Down:Connect(function()
-        
-        end)
+
 
         local function ORBHB_fake_script()
             local script = Instance.new('LocalScript', ambientShadow)
