@@ -130,7 +130,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         Uncheck.Size = UDim2.new(0, 33, 0, 33)
         Uncheck.ZIndex = 5
         Uncheck.AutoButtonColor = false
-        Uncheck.Image = "http://www.roblox.com/asset/?id=6031094678"
+        Uncheck.Image = ""
         Uncheck.ImageColor3 = Color3.fromRGB(255, 84, 84)
         Uncheck.MouseButton1Down:Connect(function()
 
