@@ -121,20 +121,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         local Uncheck = Instance.new("ImageButton")
         local Check = Instance.new("ImageButton")
         
-        Uncheck.Name = "Uncheck"
-        Uncheck.Parent = Window
-        Uncheck.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Uncheck.BackgroundTransparency = 1.000
-        Uncheck.BorderSizePixel = 0
-        Uncheck.Position = UDim2.new(0, 55, 0, 67)
-        Uncheck.Size = UDim2.new(0, 33, 0, 33)
-        Uncheck.ZIndex = 5
-        Uncheck.AutoButtonColor = false
-        Uncheck.Image = ""
-        Uncheck.ImageColor3 = Color3.fromRGB(255, 84, 84)
-        Uncheck.MouseButton1Down:Connect(function()
 
-        end)
         
         Check.Name = "Check"
         Check.Parent = Window
