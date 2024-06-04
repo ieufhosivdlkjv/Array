@@ -96,7 +96,7 @@ function Nofitication:Notify(nofdebug, middledebug, all)
         ImageButton.BackgroundTransparency = 1.000
         ImageButton.BorderSizePixel = 0
         ImageButton.Position = UDim2.new(0, 4, 0, 4)
-        ImageButton.Size = UDim2.new(0, 23, 0, 23)
+        ImageButton.Size = UDim2.new(0, 30, 0, 30)
         ImageButton.ZIndex = 5
         ImageButton.AutoButtonColor = false
         ImageButton.Image = all.Image
