@@ -1,5 +1,6 @@
 Folder = "TeTraX"
 return {
-["Saving"] = true,
+["Saving"] = false,
 ["File"] = Folder.."//TeTraXSettings",
+
 }
