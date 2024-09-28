@@ -1,0 +1,4 @@
+return {
+["Saving"] = true,
+["File"] = "TeTraXSettings",
+}
