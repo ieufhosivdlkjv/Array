@@ -18,7 +18,7 @@ local ArrayFieldFolder = "ArrayField"
 local ConfigurationFolder = ArrayFieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 local ArrayFieldQuality = {}
-local UI-Settings = loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/ui-settings"))()
+local UISettings = loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/ui-settings"))()
 local ArrayFieldLibrary = {
 	Flags = {},
 	Theme = {
@@ -346,7 +346,7 @@ local function LoadConfiguration(Configuration)
 end
 
 local function SaveConfiguration()
-	if not UI-Settings["Saving"] == true then return end
+	if not UISettings["Saving"] == true then return end
 	local Data = {}
 	for i,v in pairs(ArrayFieldLibrary.Flags) do
 		if v.Type == "ColorPicker" then
@@ -355,7 +355,7 @@ local function SaveConfiguration()
 			Data[i] = v.CurrentValue or v.CurrentKeybind or v.Color or v.CurrentOption
 		end
 	end	
-	writefile(UI-Settings["File"], tostring(HttpService:JSONEncode(Data)))
+	writefile(UISettings["File"], tostring(HttpService:JSONEncode(Data)))
 end
 
 local neon = (function()  --Open sourced neon module
