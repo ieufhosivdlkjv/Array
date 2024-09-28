@@ -346,7 +346,7 @@ local function LoadConfiguration(Configuration)
 end
 
 local function SaveConfiguration()
-	if not CEnabled then return end
+	if not UI-Settings["Saving"] == true then return end
 	local Data = {}
 	for i,v in pairs(ArrayFieldLibrary.Flags) do
 		if v.Type == "ColorPicker" then
