@@ -18,7 +18,7 @@ local ArrayFieldFolder = "ArrayField"
 local ConfigurationFolder = ArrayFieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 local ArrayFieldQuality = {}
-
+local UI-Settings = loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/ui-settings"))()
 local ArrayFieldLibrary = {
 	Flags = {},
 	Theme = {
