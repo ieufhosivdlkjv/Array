@@ -521,9 +521,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ieufhosivdlkjv/UI-Lib
 gethiddenstuff.MakeCustomOutline(getgenv().Main)
 gethiddenstuff.MakeCustomTopBar(getgenv().Main)
 
-
-local tester = Instance.new("UIStroke",TabList)
-tester.Thickness = 2
+local sliderrr = Elements.Template.Slider
+local tester = Instance.new("UIStroke",sliderrr)
+tester.Thickness = 10
 tester.ApplyStrokeMode = "Border"
 tester.Color = Color3.new(1,1,1)
 tester.Transparency = 0
@@ -2859,6 +2859,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			return ToggleSettings
 		end
 
+
+
 		-- Slider
 		function Tab:CreateSlider(SliderSettings)
 			local SLDragging = false
@@ -2867,26 +2869,20 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Slider.Title.Text = SliderSettings.Name
 			Slider.Visible = true
 			Slider.Parent = TabPage
-
 			Slider.BackgroundTransparency = 1
 			Slider.UIStroke.Transparency = 1
 			Slider.Title.TextTransparency = 1
-
 			if SelectedTheme ~= RayfieldLibrary.Theme.Default then
 				Slider.Main.Shadow.Visible = false
 			end
-
 			Slider.Main.BackgroundColor3 = SelectedTheme.SliderBackground
 			Slider.Main.UIStroke.Color = SelectedTheme.SliderStroke
 			Slider.Main.Progress.UIStroke.Color = SelectedTheme.SliderStroke
 			Slider.Main.Progress.BackgroundColor3 = SelectedTheme.SliderProgress
-
 			TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 			TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
 			TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
-
 			Slider.Main.Progress.Size =	UDim2.new(0, Slider.Main.AbsoluteSize.X * ((SliderSettings.CurrentValue + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (SliderSettings.CurrentValue / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)
-
 			if not SliderSettings.Suffix then
 				Slider.Main.Information.Text = tostring(SliderSettings.CurrentValue)
 			else
