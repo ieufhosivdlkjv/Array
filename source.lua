@@ -521,7 +521,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ieufhosivdlkjv/UI-Lib
 gethiddenstuff.MakeCustomOutline(getgenv().Main)
 gethiddenstuff.MakeCustomTopBar(getgenv().Main)
 
-local sliderrr = Elements.Template.Slider
+local sliderrr = Elements.Template.Slider.Main
 local tester = Instance.new("UIStroke",sliderrr)
 tester.Thickness = 10
 tester.ApplyStrokeMode = "Border"
