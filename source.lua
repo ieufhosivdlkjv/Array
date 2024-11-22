@@ -521,13 +521,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ieufhosivdlkjv/UI-Lib
 gethiddenstuff.MakeCustomOutline(getgenv().Main)
 gethiddenstuff.MakeCustomTopBar(getgenv().Main)
 
-local sliderrr = Elements.Template.Slider.Main
-local tester = Instance.new("UIStroke",sliderrr)
+local sliderrr = Elements.Template.Slider.Main.Progress
+--[[local tester = Instance.new("UIStroke",sliderrr)
 tester.Thickness = 10
 tester.ApplyStrokeMode = "Border"
 tester.Color = Color3.new(1,1,1)
-tester.Transparency = 0
-local windowuigrads = Instance.new("UIGradient",tester)
+tester.Transparency = 0]]
+local windowuigrads = Instance.new("UIGradient",sliderrr)
 windowuigrads.Color = ColorSequence.new(
     Color3.fromHex("ed7d1a"),
     Color3.fromHex("211aed")
@@ -2866,7 +2866,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local SLDragging = false
 			local Slider = Elements.Template.Slider:Clone()
 			Slider.Name = SliderSettings.Name
-			Slider.Title.Text = SliderSettings.Name
 			Slider.Visible = true
 			Slider.Parent = TabPage
 			Slider.BackgroundTransparency = 1
